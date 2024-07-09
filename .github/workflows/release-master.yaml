@@ -10,6 +10,9 @@ on:
       - "**/*.yaml"
       - "**/*.md"
 
+permissions:
+  contents: read
+
 jobs:
   latest-release:
     name: Push image to ghcr.io

@@ -4,9 +4,14 @@ on:
   pull_request:
   merge_group: # enable merge queue
 
+permissions:
+  contents: read
+
 jobs:
 
   build:
+    permissions:
+      pull-requests: read  # for golangci/golangci-lint-action to fetch pull requests
     runs-on: ubuntu-22.04
     strategy:
       matrix:
